@@ -32,8 +32,8 @@ type Connection struct {
 }
 
 func (c *Connection) StartReader() {
-	fmt.Println("Conn StartReader ConnID:", c.ConnID)
-	defer fmt.Println("Conn StartReader Stop ConnID:", c.ConnID)
+	//fmt.Println("Conn StartReader ConnID:", c.ConnID)
+	//defer fmt.Println("Conn StartReader Stop ConnID:", c.ConnID)
 	defer c.Stop()
 
 	//读取数据进行处理操作
@@ -85,7 +85,7 @@ func (c *Connection) StartReader() {
 
 // StartWrite 写出数据操作
 func (c *Connection) StartWrite() {
-	defer fmt.Println("Conn StartWrite Stop ConnID:", c.ConnID)
+	//defer fmt.Println("Conn StartWrite Stop ConnID:", c.ConnID)
 	//循环监听数据
 	for {
 		select {

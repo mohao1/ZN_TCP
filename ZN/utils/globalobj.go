@@ -43,7 +43,7 @@ func init() {
 	//设置默认参数
 	GlobalOBJ = &GlobalObj{
 		Name:              "ZNServer", //默认服务名称
-		Version:           "V0.4",     //默认版本
+		Version:           "V1.0",     //默认版本
 		Host:              "0.0.0.0",  //默认IP地址
 		TcpPort:           8080,       //默认端口
 		MaxConn:           1000,       //默认最大连接数量

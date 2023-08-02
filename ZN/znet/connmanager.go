@@ -21,7 +21,7 @@ func (m *ConnManager) Add(conn ziface.IConnection) {
 
 	m.connectionMap[conn.GetConnID()] = conn
 
-	fmt.Println("ConnManager Add OK ConnID :", conn.GetConnID())
+	//fmt.Println("ConnManager Add OK ConnID :", conn.GetConnID())
 }
 
 // Remove 删除连接
@@ -32,7 +32,7 @@ func (m *ConnManager) Remove(conn ziface.IConnection) {
 
 	delete(m.connectionMap, conn.GetConnID())
 
-	fmt.Println("ConnManager Delete OK ConnID :", conn.GetConnID())
+	//fmt.Println("ConnManager Delete OK ConnID :", conn.GetConnID())
 }
 
 // Get 获取连接
@@ -67,7 +67,7 @@ func (m *ConnManager) ClearConn() {
 		//删除连接
 		delete(m.connectionMap, connId)
 	}
-	fmt.Println("ConnManager Delete All OK")
+	//fmt.Println("ConnManager Delete All OK")
 }
 
 // NewConnManager 创建方法

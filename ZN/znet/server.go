@@ -62,7 +62,7 @@ func (s *Server) Start() {
 			//进行连接限制
 			if s.connManger.Len() >= utils.GlobalOBJ.MaxConn {
 				//TODO 返回连接过多
-				fmt.Println("返回连接过多")
+				//fmt.Println("返回连接过多")
 				//进行断开连接
 				conn.Close()
 				continue
@@ -119,7 +119,7 @@ func (s *Server) SetOnConnStopHook(hook ziface.OnHookFunc) {
 func (s *Server) CallOnConnStartHook(conn ziface.IConnection) {
 	//判断是否存在Hook
 	if s.OnConnStartHook != nil {
-		fmt.Println("OnConnStartHook Run....")
+		//fmt.Println("OnConnStartHook Run....")
 		s.OnConnStartHook(conn)
 	}
 }
@@ -128,7 +128,7 @@ func (s *Server) CallOnConnStartHook(conn ziface.IConnection) {
 func (s *Server) CallOnConnStopHook(conn ziface.IConnection) {
 	//判断是否存在Hook
 	if s.OnConnStopHook != nil {
-		fmt.Println("OnConnStopHook Run....")
+		//fmt.Println("OnConnStopHook Run....")
 		s.OnConnStopHook(conn)
 	}
 }
